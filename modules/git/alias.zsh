@@ -50,6 +50,7 @@ alias gcO='git checkout --patch'
 alias gcf='git commit --amend --reuse-message HEAD'
 alias gcF='git commit --verbose --amend'
 alias gcp='git cherry-pick --ff'
+alias gcpc='git cherry-pick --continue'
 alias gcP='git cherry-pick --no-commit'
 alias gcr='git revert'
 alias gcR='git reset "HEAD^"'
@@ -76,9 +77,11 @@ alias gdi='git status --porcelain --short --ignored | sed -n "s/^!! //p"'
 
 # Fetch (f)
 alias gf='git fetch'
+alias gfa='git fetch --all'
 alias gfc='git clone'
 alias gfm='git pull'
 alias gfr='git pull --rebase'
+alias gpr='git pull --rebase'
 
 # Grep (g)
 alias gg='git grep'
@@ -106,6 +109,10 @@ alias gld='git log --topo-order --stat --patch --full-diff --pretty=format:"${_g
 alias glo='git log --topo-order --pretty=format:"${_git_log_oneline_format}"'
 alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_oneline_format}"'
 alias glb='git log --topo-order --pretty=format:"${_git_log_brief_format}"'
+
+alias glgg1="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative"
+alias glgg2="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit"
+
 alias glc='git shortlog --summary --numbered'
 
 # Merge (m)
