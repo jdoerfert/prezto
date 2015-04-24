@@ -32,6 +32,7 @@ alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
 alias rm='nocorrect rm'
+alias time='/usr/bin/time -p'
 
 # Disable globbing.
 alias bower='noglob bower'
@@ -48,7 +49,7 @@ alias sftp='noglob sftp'
 # Define general aliases.
 alias _='sudo'
 alias b='${(z)BROWSER}'
-alias cp="${aliases[cp]:-cp} -i"
+alias cp="${aliases[cp]:-cp} -i --reflink=auto"
 alias e='${(z)VISUAL:-${(z)EDITOR}}'
 alias ln="${aliases[ln]:-ln} -i"
 alias mkdir="${aliases[mkdir]:-mkdir} -p"
@@ -56,8 +57,18 @@ alias mv="${aliases[mv]:-mv} -i"
 alias p='${(z)PAGER}'
 alias po='popd'
 alias pu='pushd'
-alias rm="${aliases[rm]:-rm} -i"
 alias type='type -a'
+
+alias -g G='| grep '
+alias -g L='| less'
+alias -g P='| ${PAGER:-less}'
+alias -g ONE='2>&1'
+alias -g TWO='1>&2'
+
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+alias lock='xlock -mode blank'
 
 # ls
 if is-callable 'dircolors'; then
