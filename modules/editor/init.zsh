@@ -202,7 +202,7 @@ function prepend-sudo {
 zle -N prepend-sudo
 
 # Reset to default key bindings.
-bindkey -d
+#bindkey -d
 
 #
 # Emacs Key Bindings
