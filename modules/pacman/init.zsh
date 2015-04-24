@@ -79,6 +79,6 @@ fi
 
 # Synchronizes the local package database against the repositories then
 # upgrades outdated packages.
-alias pacU="${_pacman_sudo}${_pacman_frontend} --sync --refresh --sysupgrade"
+alias pacU="sudo snapper -c root create --command '${_pacman_sudo}${_pacman_frontend} --sync --refresh --aur --sysupgrade' --description SysUpgrade"
 
 unset _pacman_{frontend,sudo}
