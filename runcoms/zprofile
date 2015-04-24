@@ -17,9 +17,16 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
-export PAGER='less'
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='vimpager'
+export BROWSER=firefox
+
+#
+# Development
+#
+
+export PATH=~/.bin:$PATH
 
 #
 # Language
