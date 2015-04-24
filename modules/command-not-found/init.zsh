@@ -9,8 +9,8 @@
 if [[ -s '/etc/zsh_command_not_found' ]]; then
   source '/etc/zsh_command_not_found'
 # Load command-not-found on Arch Linux-based distributions.
-elif [[ -s '/usr/share/doc/pkgfile/command-not-found.zsh' ]]; then
-  source '/usr/share/doc/pkgfile/command-not-found.zsh'
+elif [[ -s '/etc/profile.d/cnf.sh' ]]; then
+  source '/etc/profile.d/cnf.sh'
 # Return if requirements are not found.
 else
   return 1
