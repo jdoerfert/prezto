@@ -1,3 +1,7 @@
 *.zwc
 *.zwc.old
+.zhistory
+.zdirs
+.zsh_history
+.zcompdump
 modules/*/cache.zsh
