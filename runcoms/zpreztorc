@@ -24,24 +24,25 @@ zstyle ':prezto:*:*' color 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-  'environment' \
-  'terminal' \
-  'editor' \
-  'history' \
-  'directory' \
-  'python' \
-  'spectrum' \
-  'utility' \
-  'completion' \
-  'gitignore' \
-  'git' \
-  'gpg' \
-  'ssh' \
   'archive' \
   'command-not-found' \
+  'completion' \
+  'directory' \
+  'editor' \
+  'environment' \
   'fasd' \
+  'git' \
+  'gitignore' \
+  'gpg' \
+  'history' \
   'pacman' \
+  'python' \
   'screen' \
+  'spectrum' \
+  'ssh' \
+  'terminal' \
+  'tmux' \
+  'utility' \
   'spectrum' \
   'syntax-highlighting' \
   'history-substring-search' \
@@ -86,10 +87,10 @@ zstyle ':prezto:module:git:status:ignore' submodules 'all'
 #
 
 # Set the query found color.
-zstyle ':prezto:module:history-substring-search:color' found 'green'
+zstyle ':prezto:module:history-substring-search:color' found 'yellow'
 
 # Set the query not found color.
-zstyle ':prezto:module:history-substring-search:color' not-found 'red'
+zstyle ':prezto:module:history-substring-search:color' not-found 'orange'
 
 # Set the search globbing flags.
 zstyle ':prezto:module:history-substring-search' globbing-flags ''
@@ -171,7 +172,7 @@ zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 #
 
 # Auto start a session when Zsh is launched in a local terminal.
-zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' local 'no'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 zstyle ':prezto:module:tmux:auto-start' remote 'yes'
